@@ -11,6 +11,8 @@
 		B70C7992235C7766004259A9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70C7991235C7766004259A9 /* CloudKit.framework */; };
 		B70C7994235C776F004259A9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70C7993235C776F004259A9 /* GameKit.framework */; };
 		B70C7998235C7E71004259A9 /* AppleKitsCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B70C7997235C7E71004259A9 /* AppleKitsCore.m */; };
+		B738F99023FB73BE0050004F /* CloudKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B738F98F23FB73BE0050004F /* CloudKit.m */; };
+		B738F99323FB79180050004F /* Callback.m in Sources */ = {isa = PBXBuildFile; fileRef = B738F99223FB79180050004F /* Callback.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,12 @@
 		B70C7993235C776F004259A9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		B70C7996235C7E71004259A9 /* AppleKitsCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleKitsCore.h; sourceTree = "<group>"; };
 		B70C7997235C7E71004259A9 /* AppleKitsCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppleKitsCore.m; sourceTree = "<group>"; };
+		B738F98E23FB73BE0050004F /* CloudKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudKit.h; sourceTree = "<group>"; };
+		B738F98F23FB73BE0050004F /* CloudKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloudKit.m; sourceTree = "<group>"; };
+		B738F99123FB79180050004F /* Callback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Callback.h; sourceTree = "<group>"; };
+		B738F99223FB79180050004F /* Callback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Callback.m; sourceTree = "<group>"; };
+		B738F99423FB845B0050004F /* AppleKitsConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleKitsConstants.h; sourceTree = "<group>"; };
+		B738F99523FB8D110050004F /* CallbackTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallbackTypes.h; sourceTree = "<group>"; };
 		B74FAC19235C732800B87216 /* libAppleKits4Unity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppleKits4Unity.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74FAC26235C747F00B87216 /* UnityBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnityBridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +59,8 @@
 		B70C798E235C7672004259A9 /* CloudKit */ = {
 			isa = PBXGroup;
 			children = (
+				B738F98E23FB73BE0050004F /* CloudKit.h */,
+				B738F98F23FB73BE0050004F /* CloudKit.m */,
 			);
 			path = CloudKit;
 			sourceTree = "<group>";
@@ -74,10 +84,22 @@
 		B70C7995235C7E4A004259A9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B738F99623FB8D3C0050004F /* Callback */,
 				B70C7996235C7E71004259A9 /* AppleKitsCore.h */,
 				B70C7997235C7E71004259A9 /* AppleKitsCore.m */,
+				B738F99423FB845B0050004F /* AppleKitsConstants.h */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		B738F99623FB8D3C0050004F /* Callback */ = {
+			isa = PBXGroup;
+			children = (
+				B738F99123FB79180050004F /* Callback.h */,
+				B738F99223FB79180050004F /* Callback.m */,
+				B738F99523FB8D110050004F /* CallbackTypes.h */,
+			);
+			path = Callback;
 			sourceTree = "<group>";
 		};
 		B74FAC10235C732800B87216 = {
@@ -174,7 +196,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B738F99023FB73BE0050004F /* CloudKit.m in Sources */,
 				B70C7998235C7E71004259A9 /* AppleKitsCore.m in Sources */,
+				B738F99323FB79180050004F /* Callback.m in Sources */,
 				B70C798D235C7580004259A9 /* UnityBridge.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
