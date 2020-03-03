@@ -35,8 +35,8 @@
     self = [super init];
     if (self)
     {
-        container = CKContainer.defaultContainer;
-        privateDatabase = container.privateCloudDatabase;
+        container = [CKContainer defaultContainer];
+        privateDatabase = [container privateCloudDatabase];
         defaultZone = [CKRecordZone defaultRecordZone];
         recordStore = [[NSMutableDictionary alloc] init];
     }
@@ -57,6 +57,21 @@
     return record;
 }
 
+-(void) CheckAccountStatus:(CallbackKey) result
+{
+    [[CKContainer defaultContainer] accountStatusWithCompletionHandler:^(CKAccountStatus accountStatus, NSError *error) {
+
+        if (accountStatus == CKAccountStatusAvailable)
+        {
+            [[Callback sharedInstance] GetResultCallback](result, true, "");
+        }
+        else
+        {
+            [[Callback sharedInstance] GetResultCallback](result, false, "iCloud ded");
+        }
+    }];
+}
+
 -(void) SaveFileWithKey:(NSString*)key filePath:(NSString*) filePath resultHandler:(CallbackKey) result
 {
     CKRecord* record = [self FindOrCreateRecordWithKey: key withType:RECORDTYPEFILE];
@@ -67,7 +82,7 @@
     {
        if (error)
        {
-           [[Callback sharedInstance]GetResultCallback](result, false, [error.description cStringUsingEncoding:NSNonLossyASCIIStringEncoding]);
+           [[Callback sharedInstance]GetResultCallback](result, false, [error.description cStringUsingEncoding:kCFStringEncodingUTF8]);
            return;
        }
 
@@ -85,14 +100,14 @@
 
        if (error)
        {
-           [[Callback sharedInstance]GetFileResultCallback](fileResult, false, NULL, [error.description cStringUsingEncoding:NSNonLossyASCIIStringEncoding]);
+           [[Callback sharedInstance]GetFileResultCallback](fileResult, false, NULL, [error.description cStringUsingEncoding:kCFStringEncodingUTF8]);
            return;
 
        }
        else
        {
            CKAsset* asset = record[RECORDTYPEFILE];
-           [[Callback sharedInstance]GetFileResultCallback](fileResult, true, [[asset.fileURL absoluteString] cStringUsingEncoding:NSNonLossyASCIIStringEncoding], [error.description cStringUsingEncoding:NSNonLossyASCIIStringEncoding]);
+           [[Callback sharedInstance]GetFileResultCallback](fileResult, true, [[asset.fileURL absoluteString] cStringUsingEncoding:kCFStringEncodingUTF8], [error.description cStringUsingEncoding:kCFStringEncodingUTF8]);
        }
     }];
 }

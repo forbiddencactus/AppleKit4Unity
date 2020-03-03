@@ -13,9 +13,56 @@
 		B70C7998235C7E71004259A9 /* AppleKitsCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B70C7997235C7E71004259A9 /* AppleKitsCore.m */; };
 		B738F99023FB73BE0050004F /* CloudKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B738F98F23FB73BE0050004F /* CloudKit.m */; };
 		B738F99323FB79180050004F /* Callback.m in Sources */ = {isa = PBXBuildFile; fileRef = B738F99223FB79180050004F /* Callback.m */; };
+		B738F99B23FE4F910050004F /* CallbackBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = B738F99A23FE4F910050004F /* CallbackBridge.mm */; };
+		B738F99E23FE546B0050004F /* CloudKitBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = B738F99D23FE546B0050004F /* CloudKitBridge.mm */; };
+		B738F9A923FF8DB60050004F /* UnityBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = B74FAC26235C747F00B87216 /* UnityBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B738F9AA23FF8DF70050004F /* CallbackBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = B738F99923FE4F910050004F /* CallbackBridge.h */; };
+		B738F9AB23FF8DFC0050004F /* CallbackBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = B738F99A23FE4F910050004F /* CallbackBridge.mm */; };
+		B738F9AC23FF8DFE0050004F /* Callback.h in Headers */ = {isa = PBXBuildFile; fileRef = B738F99123FB79180050004F /* Callback.h */; };
+		B738F9AD23FF8E010050004F /* Callback.m in Sources */ = {isa = PBXBuildFile; fileRef = B738F99223FB79180050004F /* Callback.m */; };
+		B738F9AE23FF8E040050004F /* CallbackTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = B738F99523FB8D110050004F /* CallbackTypes.h */; };
+		B738F9AF23FF8E080050004F /* AppleKitsCore.h in Headers */ = {isa = PBXBuildFile; fileRef = B70C7996235C7E71004259A9 /* AppleKitsCore.h */; };
+		B738F9B023FF8E0B0050004F /* AppleKitsCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B70C7997235C7E71004259A9 /* AppleKitsCore.m */; };
+		B738F9B123FF8E0D0050004F /* AppleKitsConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = B738F99423FB845B0050004F /* AppleKitsConstants.h */; };
+		B738F9B223FF8E100050004F /* CloudKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B738F98E23FB73BE0050004F /* CloudKit.h */; };
+		B738F9B323FF8E140050004F /* CloudKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B738F98F23FB73BE0050004F /* CloudKit.m */; };
+		B738F9B423FF8E160050004F /* CloudKitBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = B738F99C23FE546B0050004F /* CloudKitBridge.h */; };
+		B738F9B523FF8E190050004F /* CloudKitBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = B738F99D23FE546B0050004F /* CloudKitBridge.mm */; };
+		B738F9B623FF8E1E0050004F /* UnityBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = B70C798C235C7580004259A9 /* UnityBridge.mm */; };
+		B738F9B723FF97A60050004F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70C7993235C776F004259A9 /* GameKit.framework */; };
+		B738F9B823FF97A60050004F /* GameKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B70C7993235C776F004259A9 /* GameKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B738F9BC23FF982E0050004F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70C7991235C7766004259A9 /* CloudKit.framework */; };
+		B738F9BD23FF982E0050004F /* CloudKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B70C7991235C7766004259A9 /* CloudKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B738F9CF23FF9FFC0050004F /* CallbackBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = B738F99A23FE4F910050004F /* CallbackBridge.mm */; };
+		B738F9D023FFA0000050004F /* Callback.m in Sources */ = {isa = PBXBuildFile; fileRef = B738F99223FB79180050004F /* Callback.m */; };
+		B738F9D123FFA0130050004F /* AppleKitsCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B70C7997235C7E71004259A9 /* AppleKitsCore.m */; };
+		B738F9D223FFA0180050004F /* CloudKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B738F98F23FB73BE0050004F /* CloudKit.m */; };
+		B738F9D323FFA01B0050004F /* CloudKitBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = B738F99D23FE546B0050004F /* CloudKitBridge.mm */; };
+		B738F9D423FFA01E0050004F /* UnityBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = B70C798C235C7580004259A9 /* UnityBridge.mm */; };
+		B738F9DA23FFA4660050004F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70C7993235C776F004259A9 /* GameKit.framework */; };
+		B738F9DD23FFA4680050004F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70C7991235C7766004259A9 /* CloudKit.framework */; };
+		B7E530F3240E0C5600DEB640 /* GameKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E530F2240E0C5600DEB640 /* GameKit.m */; };
+		B7E530F7240E113200DEB640 /* UIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E530F6240E113200DEB640 /* UIHelper.m */; };
+		B7E530F9240E141100DEB640 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E530F8240E141100DEB640 /* AppKit.framework */; };
+		B7E530FA240E14EB00DEB640 /* GameKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E530F2240E0C5600DEB640 /* GameKit.m */; };
+		B7E530FB240E14EB00DEB640 /* GameKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E530F2240E0C5600DEB640 /* GameKit.m */; };
+		B7E530FC240E15AC00DEB640 /* UIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E530F6240E113200DEB640 /* UIHelper.m */; };
+		B7E530FD240E15AC00DEB640 /* UIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E530F6240E113200DEB640 /* UIHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B738F9B923FF97A60050004F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B738F9B823FF97A60050004F /* GameKit.framework in Embed Frameworks */,
+				B738F9BD23FF982E0050004F /* CloudKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B74FAC17235C732800B87216 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -39,11 +86,42 @@
 		B738F99223FB79180050004F /* Callback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Callback.m; sourceTree = "<group>"; };
 		B738F99423FB845B0050004F /* AppleKitsConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleKitsConstants.h; sourceTree = "<group>"; };
 		B738F99523FB8D110050004F /* CallbackTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallbackTypes.h; sourceTree = "<group>"; };
+		B738F99923FE4F910050004F /* CallbackBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallbackBridge.h; sourceTree = "<group>"; };
+		B738F99A23FE4F910050004F /* CallbackBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CallbackBridge.mm; sourceTree = "<group>"; };
+		B738F99C23FE546B0050004F /* CloudKitBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudKitBridge.h; sourceTree = "<group>"; };
+		B738F99D23FE546B0050004F /* CloudKitBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CloudKitBridge.mm; sourceTree = "<group>"; };
+		B738F9A323FF8D940050004F /* libdyAppleKits4Unity.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libdyAppleKits4Unity.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		B738F9C223FF9FC00050004F /* AppleKits4UnityBundle.bundle */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AppleKits4UnityBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		B738F9C423FF9FC00050004F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B74FAC19235C732800B87216 /* libAppleKits4Unity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppleKits4Unity.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74FAC26235C747F00B87216 /* UnityBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnityBridge.h; sourceTree = "<group>"; };
+		B7E530F1240E0C5600DEB640 /* GameKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameKit.h; sourceTree = "<group>"; };
+		B7E530F2240E0C5600DEB640 /* GameKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameKit.m; sourceTree = "<group>"; };
+		B7E530F5240E113200DEB640 /* UIHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIHelper.h; sourceTree = "<group>"; };
+		B7E530F6240E113200DEB640 /* UIHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIHelper.m; sourceTree = "<group>"; };
+		B7E530F8240E141100DEB640 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B738F9A123FF8D940050004F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B738F9B723FF97A60050004F /* GameKit.framework in Frameworks */,
+				B738F9BC23FF982E0050004F /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B738F9BF23FF9FC00050004F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7E530F9240E141100DEB640 /* AppKit.framework in Frameworks */,
+				B738F9DA23FFA4660050004F /* GameKit.framework in Frameworks */,
+				B738F9DD23FFA4680050004F /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B74FAC16235C732800B87216 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,6 +139,8 @@
 			children = (
 				B738F98E23FB73BE0050004F /* CloudKit.h */,
 				B738F98F23FB73BE0050004F /* CloudKit.m */,
+				B738F99C23FE546B0050004F /* CloudKitBridge.h */,
+				B738F99D23FE546B0050004F /* CloudKitBridge.mm */,
 			);
 			path = CloudKit;
 			sourceTree = "<group>";
@@ -68,6 +148,8 @@
 		B70C798F235C774B004259A9 /* GameKit */ = {
 			isa = PBXGroup;
 			children = (
+				B7E530F1240E0C5600DEB640 /* GameKit.h */,
+				B7E530F2240E0C5600DEB640 /* GameKit.m */,
 			);
 			path = GameKit;
 			sourceTree = "<group>";
@@ -75,6 +157,7 @@
 		B70C7990235C7766004259A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B7E530F8240E141100DEB640 /* AppKit.framework */,
 				B70C7993235C776F004259A9 /* GameKit.framework */,
 				B70C7991235C7766004259A9 /* CloudKit.framework */,
 			);
@@ -95,6 +178,8 @@
 		B738F99623FB8D3C0050004F /* Callback */ = {
 			isa = PBXGroup;
 			children = (
+				B738F99923FE4F910050004F /* CallbackBridge.h */,
+				B738F99A23FE4F910050004F /* CallbackBridge.mm */,
 				B738F99123FB79180050004F /* Callback.h */,
 				B738F99223FB79180050004F /* Callback.m */,
 				B738F99523FB8D110050004F /* CallbackTypes.h */,
@@ -102,10 +187,19 @@
 			path = Callback;
 			sourceTree = "<group>";
 		};
+		B738F9C323FF9FC00050004F /* AppleKits4UnityBundle */ = {
+			isa = PBXGroup;
+			children = (
+				B738F9C423FF9FC00050004F /* Info.plist */,
+			);
+			path = AppleKits4UnityBundle;
+			sourceTree = "<group>";
+		};
 		B74FAC10235C732800B87216 = {
 			isa = PBXGroup;
 			children = (
 				B74FAC1B235C732800B87216 /* AppleKits4Unity */,
+				B738F9C323FF9FC00050004F /* AppleKits4UnityBundle */,
 				B74FAC1A235C732800B87216 /* Products */,
 				B70C7990235C7766004259A9 /* Frameworks */,
 			);
@@ -115,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				B74FAC19235C732800B87216 /* libAppleKits4Unity.a */,
+				B738F9A323FF8D940050004F /* libdyAppleKits4Unity.dylib */,
+				B738F9C223FF9FC00050004F /* AppleKits4UnityBundle.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,15 +229,78 @@
 				B70C7995235C7E4A004259A9 /* Core */,
 				B70C798F235C774B004259A9 /* GameKit */,
 				B70C798E235C7672004259A9 /* CloudKit */,
+				B7E530F4240E111300DEB640 /* UI */,
 				B74FAC26235C747F00B87216 /* UnityBridge.h */,
 				B70C798C235C7580004259A9 /* UnityBridge.mm */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		B7E530F4240E111300DEB640 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B7E530F5240E113200DEB640 /* UIHelper.h */,
+				B7E530F6240E113200DEB640 /* UIHelper.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		B738F99F23FF8D940050004F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B738F9B223FF8E100050004F /* CloudKit.h in Headers */,
+				B738F9AA23FF8DF70050004F /* CallbackBridge.h in Headers */,
+				B738F9B423FF8E160050004F /* CloudKitBridge.h in Headers */,
+				B738F9A923FF8DB60050004F /* UnityBridge.h in Headers */,
+				B738F9B123FF8E0D0050004F /* AppleKitsConstants.h in Headers */,
+				B738F9AF23FF8E080050004F /* AppleKitsCore.h in Headers */,
+				B738F9AC23FF8DFE0050004F /* Callback.h in Headers */,
+				B738F9AE23FF8E040050004F /* CallbackTypes.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		B738F9A223FF8D940050004F /* dyAppleKits4Unity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B738F9A423FF8D940050004F /* Build configuration list for PBXNativeTarget "dyAppleKits4Unity" */;
+			buildPhases = (
+				B738F99F23FF8D940050004F /* Headers */,
+				B738F9A023FF8D940050004F /* Sources */,
+				B738F9A123FF8D940050004F /* Frameworks */,
+				B738F9B923FF97A60050004F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dyAppleKits4Unity;
+			productName = dyAppleKits4Unity;
+			productReference = B738F9A323FF8D940050004F /* libdyAppleKits4Unity.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		B738F9C123FF9FC00050004F /* AppleKits4UnityBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B738F9C523FF9FC00050004F /* Build configuration list for PBXNativeTarget "AppleKits4UnityBundle" */;
+			buildPhases = (
+				B738F9BE23FF9FC00050004F /* Sources */,
+				B738F9BF23FF9FC00050004F /* Frameworks */,
+				B738F9C023FF9FC00050004F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppleKits4UnityBundle;
+			productName = AppleKits4UnityBundle;
+			productReference = B738F9C223FF9FC00050004F /* AppleKits4UnityBundle.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		B74FAC18235C732800B87216 /* AppleKits4Unity */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B74FAC22235C732800B87216 /* Build configuration list for PBXNativeTarget "AppleKits4Unity" */;
@@ -168,6 +327,12 @@
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Forbidden Cactus";
 				TargetAttributes = {
+					B738F9A223FF8D940050004F = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					B738F9C123FF9FC00050004F = {
+						CreatedOnToolsVersion = 11.3;
+					};
 					B74FAC18235C732800B87216 = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -187,11 +352,53 @@
 			projectRoot = "";
 			targets = (
 				B74FAC18235C732800B87216 /* AppleKits4Unity */,
+				B738F9A223FF8D940050004F /* dyAppleKits4Unity */,
+				B738F9C123FF9FC00050004F /* AppleKits4UnityBundle */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		B738F9C023FF9FC00050004F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		B738F9A023FF8D940050004F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B738F9B623FF8E1E0050004F /* UnityBridge.mm in Sources */,
+				B738F9B323FF8E140050004F /* CloudKit.m in Sources */,
+				B738F9AD23FF8E010050004F /* Callback.m in Sources */,
+				B7E530FC240E15AC00DEB640 /* UIHelper.m in Sources */,
+				B738F9AB23FF8DFC0050004F /* CallbackBridge.mm in Sources */,
+				B738F9B023FF8E0B0050004F /* AppleKitsCore.m in Sources */,
+				B7E530FB240E14EB00DEB640 /* GameKit.m in Sources */,
+				B738F9B523FF8E190050004F /* CloudKitBridge.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B738F9BE23FF9FC00050004F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B738F9D423FFA01E0050004F /* UnityBridge.mm in Sources */,
+				B738F9D223FFA0180050004F /* CloudKit.m in Sources */,
+				B738F9D023FFA0000050004F /* Callback.m in Sources */,
+				B7E530FD240E15AC00DEB640 /* UIHelper.m in Sources */,
+				B738F9CF23FF9FFC0050004F /* CallbackBridge.mm in Sources */,
+				B738F9D123FFA0130050004F /* AppleKitsCore.m in Sources */,
+				B7E530FA240E14EB00DEB640 /* GameKit.m in Sources */,
+				B738F9D323FFA01B0050004F /* CloudKitBridge.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B74FAC15235C732800B87216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,13 +406,91 @@
 				B738F99023FB73BE0050004F /* CloudKit.m in Sources */,
 				B70C7998235C7E71004259A9 /* AppleKitsCore.m in Sources */,
 				B738F99323FB79180050004F /* Callback.m in Sources */,
+				B7E530F7240E113200DEB640 /* UIHelper.m in Sources */,
+				B738F99B23FE4F910050004F /* CallbackBridge.mm in Sources */,
 				B70C798D235C7580004259A9 /* UnityBridge.mm in Sources */,
+				B7E530F3240E0C5600DEB640 /* GameKit.m in Sources */,
+				B738F99E23FE546B0050004F /* CloudKitBridge.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		B738F9A523FF8D940050004F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B738F9A623FF8D940050004F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B738F9C623FF9FC00050004F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 45G4JLJD3W;
+				INFOPLIST_FILE = AppleKits4UnityBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forbiddencactus.AppleKits4UnityBundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		B738F9C723FF9FC00050004F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 45G4JLJD3W;
+				INFOPLIST_FILE = AppleKits4UnityBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forbiddencactus.AppleKits4UnityBundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		B74FAC20235C732800B87216 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -343,6 +628,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B738F9A423FF8D940050004F /* Build configuration list for PBXNativeTarget "dyAppleKits4Unity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B738F9A523FF8D940050004F /* Debug */,
+				B738F9A623FF8D940050004F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B738F9C523FF9FC00050004F /* Build configuration list for PBXNativeTarget "AppleKits4UnityBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B738F9C623FF9FC00050004F /* Debug */,
+				B738F9C723FF9FC00050004F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B74FAC14235C732800B87216 /* Build configuration list for PBXProject "AppleKits4Unity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

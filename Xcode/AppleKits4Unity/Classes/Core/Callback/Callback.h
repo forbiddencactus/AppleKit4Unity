@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(Callback*) sharedInstance;
 
+-(void) SetLog:(UNITY_LOG) callBack;
+-(void) Log:(const char*) logMessage;
+
 -(void) SetResultCallback:(RESULT_CALLBACK) callback;
 -(RESULT_CALLBACK) GetResultCallback;
 

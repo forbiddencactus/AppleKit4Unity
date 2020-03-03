@@ -12,6 +12,7 @@
 {
     RESULT_CALLBACK resultCallback;
     FILERESULT_CALLBACK fileResultCallback;
+    UNITY_LOG logCallback;
 }
 
 + (Callback*)sharedInstance
@@ -31,9 +32,21 @@
     if (self)
     {
         resultCallback = NULL;
+        fileResultCallback = NULL;
+        logCallback = NULL;
     }
     
     return self;
+}
+
+-(void) SetLog:(UNITY_LOG)callBack
+{
+    logCallback = callBack;
+}
+
+-(void) Log:(const char *)logMessage
+{
+    logCallback(logMessage);
 }
 
 -(void) SetResultCallback:(RESULT_CALLBACK)callback

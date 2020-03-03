@@ -7,12 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CallbackTypes.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CloudKit : NSObject
 
 + (CloudKit*)sharedInstance;
+-(void) SaveFileWithKey:(NSString*)key filePath:(NSString*) filePath resultHandler:(CallbackKey) result;
+-(void) FetchFileWithKey:(NSString*) key fileResultHandler:(CallbackKey) fileResult;
+-(void) CheckAccountStatus:(CallbackKey) result;
 
 @end
 
