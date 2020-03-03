@@ -12,6 +12,7 @@
 {
     RESULT_CALLBACK resultCallback;
     FILERESULT_CALLBACK fileResultCallback;
+    STRINGRESULT_CALLBACK stringResultCallback;
     UNITY_LOG logCallback;
 }
 
@@ -34,6 +35,7 @@
         resultCallback = NULL;
         fileResultCallback = NULL;
         logCallback = NULL;
+        stringResultCallback = NULL;
     }
     
     return self;
@@ -67,6 +69,16 @@
 -(FILERESULT_CALLBACK) GetFileResultCallback
 {
     return fileResultCallback;
+}
+
+-(void) SetStringResultCallback:(STRINGRESULT_CALLBACK) callback
+{
+    stringResultCallback = callback;
+}
+
+-(STRINGRESULT_CALLBACK) GetStringResultCallback
+{
+    return stringResultCallback;
 }
 
 @end

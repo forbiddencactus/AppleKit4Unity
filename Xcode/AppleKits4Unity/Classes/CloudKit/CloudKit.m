@@ -44,7 +44,7 @@
     return self;
 }
 
--(CKRecord*)FindOrCreateRecordWithKey:(NSString*) key withType:(NSString*) type
+-(CKRecord*)FindOrCreateRecordWithKey:(NSString*) key withType:(CKRecordType) type
 {
     if ([recordStore objectForKey:key] != nil)
     {
@@ -74,7 +74,7 @@
 
 -(void) SaveFileWithKey:(NSString*)key filePath:(NSString*) filePath resultHandler:(CallbackKey) result
 {
-    CKRecord* record = [self FindOrCreateRecordWithKey: key withType:RECORDTYPEFILE];
+    CKRecord* record = [self FindOrCreateRecordWithKey: key withType:CKRecordTypeUserRecord];
     NSURL* url = [NSURL fileURLWithPath:filePath];
     record[RECORDTYPEFILE] = [[CKAsset alloc]initWithFileURL:url];
     
@@ -108,6 +108,44 @@
        {
            CKAsset* asset = record[RECORDTYPEFILE];
            [[Callback sharedInstance]GetFileResultCallback](fileResult, true, [[asset.fileURL absoluteString] cStringUsingEncoding:kCFStringEncodingUTF8], [error.description cStringUsingEncoding:kCFStringEncodingUTF8]);
+       }
+    }];
+}
+
+-(void) SaveStringWithKey:(NSString*) key string:(NSString*) string resultHandler:(CallbackKey) result
+{
+    CKRecord* record = [self FindOrCreateRecordWithKey: key withType:RECORDTYPESTRING];
+    record[RECORDTYPESTRING] = string;
+    
+    [privateDatabase saveRecord:record completionHandler:^(CKRecord *record, NSError *error)
+    {
+       if (error)
+       {
+           [[Callback sharedInstance]GetResultCallback](result, false, [error.description cStringUsingEncoding:kCFStringEncodingUTF8]);
+           return;
+       }
+
+        [[Callback sharedInstance]GetResultCallback](result, true, NULL);
+
+    }];
+}
+
+-(void) FetchStringWithKey:(NSString*) key stringResultHandler:(CallbackKey) stringResult
+{
+    CKRecordID *recordID = [[CKRecordID alloc] initWithRecordName:key];
+
+    [privateDatabase fetchRecordWithID:recordID completionHandler:^(CKRecord *record, NSError *error) {
+
+       if (error)
+       {
+           [[Callback sharedInstance]GetStringResultCallback](stringResult, false, NULL, [error.description cStringUsingEncoding:kCFStringEncodingUTF8]);
+           return;
+
+       }
+       else
+       {
+           NSString* string = record[RECORDTYPESTRING];
+           [[Callback sharedInstance]GetStringResultCallback](stringResult, true, [string cStringUsingEncoding:kUnicodeUTF8Format], [error.description cStringUsingEncoding:kCFStringEncodingUTF8]);
        }
     }];
 }

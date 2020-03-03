@@ -11,5 +11,7 @@ extern "C"
 {
 void save_file_with_key(char* key, char* filePath, CallbackKey result);
 void fetch_file_with_key(char* key, CallbackKey fileResult);
+void save_string_with_key(char* key, char* string, CallbackKey result);
+void fetch_string_with_key(char* key, CallbackKey stringResult);
 void check_account_status(CallbackKey result);
 }

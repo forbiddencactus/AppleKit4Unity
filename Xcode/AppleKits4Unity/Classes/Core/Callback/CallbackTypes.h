@@ -14,6 +14,8 @@ typedef void (*UNITY_LOG)(const char* logMessage);
 typedef int CallbackKey;
 typedef void (*RESULT_CALLBACK)(CallbackKey callbackKey, bool isSuccessful, const char * errorMessage);
 typedef void (*FILERESULT_CALLBACK)(CallbackKey callbackKey, bool isSuccessful, const char* filePath, const char * errorMessage);
+typedef void (*STRINGRESULT_CALLBACK)(CallbackKey callbackKey, bool isSuccessful, const char* resultString, const char * errorMessage);
+
 
 
 #endif /* CallbackTypes_h */

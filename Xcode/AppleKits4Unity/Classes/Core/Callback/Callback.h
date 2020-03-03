@@ -24,6 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 -(void) SetFileResultCallback:(FILERESULT_CALLBACK) callback;
 -(FILERESULT_CALLBACK) GetFileResultCallback;
 
+-(void) SetStringResultCallback:(STRINGRESULT_CALLBACK) callback;
+-(STRINGRESULT_CALLBACK) GetStringResultCallback;
+
 @end
 
 NS_ASSUME_NONNULL_END

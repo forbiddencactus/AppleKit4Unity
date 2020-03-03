@@ -11,5 +11,6 @@
 
 //CloudKit
 #define RECORDTYPEFILE @"FileRecord"
+#define RECORDTYPESTRING @"StringRecord"
 
 #endif /* Constants_h */

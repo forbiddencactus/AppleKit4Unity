@@ -13,6 +13,7 @@ extern "C"
 
 void set_resultcallback(RESULT_CALLBACK callback);
 void set_fileresultcallback(FILERESULT_CALLBACK callback);
+void set_stringresultcallback(STRINGRESULT_CALLBACK callback);
 void set_logcallback(UNITY_LOG callback);
 
 }

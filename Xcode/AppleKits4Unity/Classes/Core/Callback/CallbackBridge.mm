@@ -20,6 +20,11 @@ void set_fileresultcallback(FILERESULT_CALLBACK callback)
 {
     [[Callback sharedInstance] SetFileResultCallback:callback];
 }
+
+void set_stringresultcallback(STRINGRESULT_CALLBACK callback)
+{
+    [[Callback sharedInstance] SetStringResultCallback:callback];
+}
     
 void set_logcallback(UNITY_LOG callback)
 {
