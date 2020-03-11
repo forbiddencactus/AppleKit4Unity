@@ -10,6 +10,7 @@
 #import <CloudKit/CloudKit.h>
 #import "AppleKitsConstants.h"
 #import "Callback.h"
+#import "BridgeHelpers.h"
 
 @implementation CloudKit
 {
@@ -63,11 +64,11 @@
 
         if (accountStatus == CKAccountStatusAvailable)
         {
-            [[Callback sharedInstance] GetResultCallback](result, true, "");
+            [[Callback sharedInstance] GetResultCallback](result, true, NULL);
         }
         else
         {
-            [[Callback sharedInstance] GetResultCallback](result, false, "iCloud ded");
+            [[Callback sharedInstance] GetResultCallback](result, false, cstr(@"iCloud does not seem to be available?"));
         }
     }];
 }
@@ -82,7 +83,7 @@
     {
        if (error)
        {
-           [[Callback sharedInstance]GetResultCallback](result, false, [error.description cStringUsingEncoding:kCFStringEncodingUTF8]);
+           [[Callback sharedInstance]GetResultCallback](result, false, cstr(error.description));
            return;
        }
 
@@ -100,14 +101,14 @@
 
        if (error)
        {
-           [[Callback sharedInstance]GetFileResultCallback](fileResult, false, NULL, [error.description cStringUsingEncoding:kCFStringEncodingUTF8]);
+           [[Callback sharedInstance]GetFileResultCallback](fileResult, false, NULL, cstr(error.description));
            return;
 
        }
        else
        {
            CKAsset* asset = record[RECORDTYPEFILE];
-           [[Callback sharedInstance]GetFileResultCallback](fileResult, true, [[asset.fileURL absoluteString] cStringUsingEncoding:kCFStringEncodingUTF8], [error.description cStringUsingEncoding:kCFStringEncodingUTF8]);
+           [[Callback sharedInstance]GetFileResultCallback](fileResult, true, cstr([asset.fileURL absoluteString]), NULL);
        }
     }];
 }
@@ -121,7 +122,7 @@
     {
        if (error)
        {
-           [[Callback sharedInstance]GetResultCallback](result, false, [error.description cStringUsingEncoding:kCFStringEncodingUTF8]);
+           [[Callback sharedInstance]GetResultCallback](result, false, cstr(error.description));
            return;
        }
 
@@ -138,14 +139,14 @@
 
        if (error)
        {
-           [[Callback sharedInstance]GetStringResultCallback](stringResult, false, NULL, [error.description cStringUsingEncoding:kCFStringEncodingUTF8]);
+           [[Callback sharedInstance]GetStringResultCallback](stringResult, false, NULL, cstr(error.description));
            return;
 
        }
        else
        {
            NSString* string = record[RECORDTYPESTRING];
-           [[Callback sharedInstance]GetStringResultCallback](stringResult, true, [string cStringUsingEncoding:kUnicodeUTF8Format], [error.description cStringUsingEncoding:kCFStringEncodingUTF8]);
+           [[Callback sharedInstance]GetStringResultCallback](stringResult, true, cstr(string), NULL);
        }
     }];
 }

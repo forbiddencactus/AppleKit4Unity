@@ -8,33 +8,33 @@
 
 #import "CloudKit.h"
 #import "CloudKitBridge.h"
+#import "BridgeHelpers.h"
 
 extern "C"
 {
-    
-    void save_file_with_key(char* key, char* filePath, CallbackKey result)
+    void ck_save_file_with_key(const char* key, const char* filePath, CallbackKey result)
     {
-        [[CloudKit sharedInstance] SaveFileWithKey:[NSString stringWithCString:key encoding:kCFStringEncodingUTF8] filePath:[NSString stringWithCString:filePath encoding:kCFStringEncodingUTF8]  resultHandler:result];
+        [[CloudKit sharedInstance] SaveFileWithKey:str(key) filePath:str(filePath)  resultHandler:result];
     }
 
-    void fetch_file_with_key(char* key, CallbackKey fileResult)
+    void ck_fetch_file_with_key(const char* key, CallbackKey fileResult)
     {
-        [[CloudKit sharedInstance] FetchFileWithKey: [NSString stringWithCString:key encoding:kCFStringEncodingUTF8] fileResultHandler:fileResult];
+        [[CloudKit sharedInstance] FetchFileWithKey: str(key) fileResultHandler:fileResult];
     }
 
-    void check_account_status(CallbackKey result)
+    void ck_check_account_status(CallbackKey result)
     {
         [[CloudKit sharedInstance] CheckAccountStatus:result];
     }
 
-    void save_string_with_key(char* key, char* string, CallbackKey result)
+    void ck_save_string_with_key(const char* key, const char* string, CallbackKey result)
     {
-        [[CloudKit sharedInstance] SaveStringWithKey:[NSString stringWithCString:key encoding:kUnicodeUTF8Format] string:[NSString stringWithCString:string encoding:kUnicodeUTF8Format] resultHandler:result];
+        [[CloudKit sharedInstance] SaveStringWithKey:str(key) string:str(string) resultHandler:result];
     }
 
-    void fetch_string_with_key(char* key, CallbackKey stringResult)
+    void ck_fetch_string_with_key(const char* key, CallbackKey stringResult)
     {
-        [[CloudKit sharedInstance] FetchStringWithKey:[NSString stringWithCString:key encoding:kUnicodeUTF8Format] stringResultHandler:stringResult];
+        [[CloudKit sharedInstance] FetchStringWithKey:str(key) stringResultHandler:stringResult];
     }
 }
 

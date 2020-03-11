@@ -12,6 +12,10 @@
 @class NSWindow, NSViewController;
 #endif
 
+#if TARGET_OS_IOS
+@class UIWindow, UIViewController;
+#endif
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIHelper : NSObject

@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B74FAC18235C732800B87216"
-               BuildableName = "libAppleKits4Unity.a"
-               BlueprintName = "AppleKits4Unity"
+               BuildableName = "libAppleKits4UnityiOS.a"
+               BlueprintName = "AppleKits4UnityiOS"
                ReferencedContainer = "container:AppleKits4Unity.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -51,8 +51,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B74FAC18235C732800B87216"
-            BuildableName = "libAppleKits4Unity.a"
-            BlueprintName = "AppleKits4Unity"
+            BuildableName = "libAppleKits4UnityiOS.a"
+            BlueprintName = "AppleKits4UnityiOS"
             ReferencedContainer = "container:AppleKits4Unity.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -7,7 +7,11 @@
 //
 
 #import "UIHelper.h"
+#if TARGET_OS_OSX
 #import <AppKit/AppKit.h>
+#else
+#import <UIKit/UIKit.h>
+#endif
 
 @implementation UIHelper
 
@@ -80,8 +84,6 @@
                      completion:nil
      ];
     
-    // set our tracker variable
-    self.presentedController = controller;
 }
 
 -(void) removeController:(UIViewController*)controller
@@ -105,8 +107,8 @@
          [controller removeFromParentViewController];
          
          // nil out tracker
-         self.presentedController = nil;
-     }];
+        
+    }];
 }
 #endif
 

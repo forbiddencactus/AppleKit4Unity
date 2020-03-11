@@ -9,9 +9,9 @@
 
 extern "C"
 {
-void save_file_with_key(char* key, char* filePath, CallbackKey result);
-void fetch_file_with_key(char* key, CallbackKey fileResult);
-void save_string_with_key(char* key, char* string, CallbackKey result);
-void fetch_string_with_key(char* key, CallbackKey stringResult);
-void check_account_status(CallbackKey result);
+void ck_save_file_with_key(const char* key, const char* filePath, CallbackKey result);
+void ck_fetch_file_with_key(const char* key, CallbackKey fileResult);
+void ck_save_string_with_key(const char* key, const char* string, CallbackKey result);
+void ck_fetch_string_with_key(const char* key, CallbackKey stringResult);
+void ck_check_account_status(CallbackKey result);
 }

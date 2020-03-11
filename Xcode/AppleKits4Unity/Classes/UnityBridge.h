@@ -33,3 +33,4 @@
 
 #include "CallbackBridge.h"
 #include "CloudKitBridge.h"
+#include "GameKitBridge.h"

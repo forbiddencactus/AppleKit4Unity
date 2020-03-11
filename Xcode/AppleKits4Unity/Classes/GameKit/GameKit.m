@@ -9,8 +9,13 @@
 #import "GameKit.h"
 #import "UIHelper.h"
 #import "Callback.h"
+#import "BridgeHelpers.h"
 #import <GameKit/GameKit.h>
+#if TARGET_OS_OSX
 #import <AppKit/AppKit.h>
+#else
+#import <UIKit/UIKit.h>
+#endif
 
 @implementation GameKit
 {
@@ -70,11 +75,11 @@
             else if (localPlayer.isAuthenticated)
             {
                 //authenticatedPlayer: is an example method name. Create your own method that is called after the local player is authenticated.
-                [[Callback sharedInstance] GetResultCallback](result, true, "");
+                [[Callback sharedInstance] GetResultCallback](result, true, NULL);
             }
             else
             {
-                [[Callback sharedInstance] GetResultCallback](result, false, [[[NSNumber numberWithInt:(int)error.code] stringValue] cStringUsingEncoding:kUnicodeUTF8Format]);
+                [[Callback sharedInstance] GetResultCallback](result, false, cstr([[NSNumber numberWithInt:(int)error.code] stringValue]));
             }
         };
     #else
@@ -82,16 +87,17 @@
             if (viewController != nil)
             {
                 //showAuthenticationDialogWhenReasonable: is an example method name. Create your own method that displays an authentication view when appropriate for your app.
-                [self showAuthenticationDialogWhenReasonable: viewController];
+                //[[UIHelper sharedInstance] addController: viewController];
+                [[Callback sharedInstance] GetResultCallback](result, false, cstr([[NSNumber numberWithInt:(int)error.code] stringValue]));
             }
             else if (localPlayer.isAuthenticated)
             {
                 //authenticatedPlayer: is an example method name. Create your own method that is called after the local player is authenticated.
-                [[Callback sharedInstance] GetResultCallback](result, true, "");
+                [[Callback sharedInstance] GetResultCallback](result, true, NULL);
             }
             else
             {
-                [[Callback sharedInstance] GetResultCallback](result, false, [[[NSNumber numberWithInt:(int)error.code] stringValue] cStringUsingEncoding:kUnicodeUTF8Format]);
+                [[Callback sharedInstance] GetResultCallback](result, false, cstr([[NSNumber numberWithInt:(int)error.code] stringValue]));
             }
         };
     #endif
@@ -100,6 +106,11 @@
 - (NSString*) getPlayerDisplayName
 {
     return [[self getLocalPlayerSafe] displayName];
+}
+
+- (NSString*) getPlayerID
+{
+    return [[self getLocalPlayerSafe] playerID];
 }
 
 @end
