@@ -64,6 +64,7 @@
 
 - (void) authenticateLocalPlayer:(CallbackKey) result
 {
+    [[Callback sharedInstance] Log:@"GameKitManager Native: Authenticating player!"];
     GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
     
     #if TARGET_OS_OSX

@@ -7,6 +7,7 @@
 //
 
 #import "Callback.h"
+#import "BridgeHelpers.h"
 
 @implementation Callback
 {
@@ -46,9 +47,9 @@
     logCallback = callBack;
 }
 
--(void) Log:(const char *)logMessage
+-(void) Log:(NSString*)logMessage
 {
-    logCallback(logMessage);
+    logCallback(cstr(logMessage));
 }
 
 -(void) SetResultCallback:(RESULT_CALLBACK)callback
